@@ -8,12 +8,14 @@ class Hello extends Component {
 		const { num, onTodoClick } = this.props;
 		console.log(num);
 		return (
-			<div
-				onClick={() => {
-					onTodoClick();
-				}}
-			>
-				{num} 222
+			<div>
+				<div
+					onClick={() => {
+						onTodoClick();
+					}}
+				>
+					{num} 222
+				</div>
 			</div>
 		);
 	}

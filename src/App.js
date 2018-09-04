@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import { Button, Input } from "antd";
 import dayjs from "dayjs";
 
 class App extends Component {
@@ -78,12 +79,15 @@ class InputC extends Component {
 	render() {
 		return (
 			<div className="list-input">
-				<input
+				<Input
 					type="text"
 					value={this.props.value}
 					onChange={this.handleChange}
+					style={{ width: 200 }}
 				/>
-				<button onClick={this.props.submitChange}>确定</button>
+				<Button type="primary" onClick={this.props.submitChange}>
+					确定
+				</Button>
 			</div>
 		);
 	}
