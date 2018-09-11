@@ -1,5 +1,19 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.todolist span {
+	display: inline-block;
+	padding: 0 10px;
+}
+.logo {
+	width: 120px;
+	height: 30px;
+	margin: 16px 24px 16px 0;
+	float: left;
+	color: #fff;
+	line-height: 30px;
+	font-size: 16px;
+	text-transform: uppercase;
 }

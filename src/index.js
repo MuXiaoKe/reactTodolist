@@ -12,13 +12,7 @@ const rootel = (
 		<BrowserRouter>
 			<div>
 				<Route path="/" component={App} />
-				{/* <Route path="/hello" component={Hello} /> */}
-				<div>
-					<p>
-						<Link to="/hello">111</Link>
-					</p>
-				</div>
-				<Hello />
+				<Route path="/hello" component={Hello} />
 			</div>
 		</BrowserRouter>
 	</Provider>
