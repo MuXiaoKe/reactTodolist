@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Layout, Menu, Breadcrumb, Button, Input } from "antd";
 import dayjs from "dayjs";
+
 const { Header, Content, Footer } = Layout;
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -106,7 +108,7 @@ class InputC extends Component {
 					type="text"
 					value={this.props.value}
 					onChange={this.handleChange}
-					style={{ width: 200 }}
+					style={{ width: 200, marginRight: 10 }}
 				/>
 				<Button type="primary" onClick={this.props.submitChange}>
 					确定
