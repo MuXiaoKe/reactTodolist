@@ -3,22 +3,36 @@ import { connect } from "react-redux";
 //import store from "../store/store";
 import { addThings } from "../store/actions";
 
-class Hello extends Component {
-	render() {
-		const { num, onTodoClick } = this.props;
-		console.log(num);
-		return (
-			<div>
-				<div
-					onClick={() => {
-						onTodoClick();
-					}}
-				>
-					{num} 222
-				</div>
+// class Hello extends Component {
+// 	render() {
+// 		const { num, onTodoClick } = this.props;
+// 		console.log(num);
+// 		return (
+// 			<div>
+// 				<div
+// 					onClick={() => {
+// 						onTodoClick();
+// 					}}
+// 				>
+// 					{num} 222
+// 				</div>
+// 			</div>
+// 		);
+// 	}
+// }
+function Hello(props) {
+	const { num, onTodoClick } = props;
+	return (
+		<div>
+			<div
+				onClick={() => {
+					onTodoClick();
+				}}
+			>
+				{num} 222
 			</div>
-		);
-	}
+		</div>
+	);
 }
 
 const mapStateToProps = function(state) {
