@@ -3,16 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import Hello from "./cpts/hello";
+import { BrowserRouter } from "react-router-dom";
+
 import store from "./store/store.js";
 import { Provider } from "react-redux";
 const rootel = (
 	<Provider store={store}>
 		<BrowserRouter>
 			<div>
-				<Route path="/" component={App} />
-				<Route path="/hello" component={Hello} />
+				<App />
 			</div>
 		</BrowserRouter>
 	</Provider>
