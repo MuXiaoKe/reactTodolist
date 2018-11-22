@@ -5,6 +5,7 @@ import { Layout, Menu } from "antd";
 import TodoList from "./cpts/todolist";
 import Hello from "./cpts/hello";
 import AccountBook from "./cpts/accountbook";
+import Test from "./cpts/test";
 
 const { Header, Content, Footer } = Layout;
 
@@ -33,6 +34,9 @@ class App extends Component {
 							<Menu.Item key="accountBook">
 								<Link to="/accountBook">accountBook</Link>
 							</Menu.Item>
+							<Menu.Item key="test">
+								<Link to="/test">test</Link>
+							</Menu.Item>
 						</Menu>
 					</Header>
 					<Content style={{ padding: "0 50px" }}>
@@ -56,6 +60,7 @@ class App extends Component {
 									path="/accountBook"
 									component={AccountBook}
 								/>
+								<Route exact path="/test" component={Test} />
 							</div>
 						</div>
 					</Content>
