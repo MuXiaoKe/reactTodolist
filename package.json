@@ -16,7 +16,8 @@
 		"redux-thunk": "^2.3.0"
 	},
 	"devDependencies": {
-		"babel-plugin-import": "^1.8.0"
+		"babel-plugin-import": "^1.8.0",
+		"prop-types": "^15.6.2"
 	},
 	"scripts": {
 		"start": "react-app-rewired start",

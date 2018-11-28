@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
 class MouseDiv extends Component {
 	render() {
 		const mouse = this.props.mouse;
@@ -10,6 +10,9 @@ class MouseDiv extends Component {
 		);
 	}
 }
+MouseDiv.propTypes = {
+	mouse: PropTypes.object
+};
 class Mouse extends Component {
 	constructor(props) {
 		super(props);
@@ -27,7 +30,7 @@ class Mouse extends Component {
 	render() {
 		return (
 			<div style={{ height: "100%" }} onMouseMove={this.handleMouseMove}>
-				{this.props.render(this.state)}
+				{this.props.children(this.state)}
 			</div>
 		);
 	}
@@ -35,8 +38,17 @@ class Mouse extends Component {
 class Test extends Component {
 	render() {
 		return (
+			// <div style={{ height: "200px", width: "100%" }}>
+			// 	<Mouse>{xy => <MouseDiv mouse={xy} />}</Mouse>
+			// </div>
 			<div style={{ height: "200px", width: "100%" }}>
-				<Mouse render={mouse => <MouseDiv mouse={mouse} />} />
+				<Mouse
+					children={mouse => (
+						<p>
+							The mouse position is {mouse.x}, {mouse.y}
+						</p>
+					)}
+				/>
 			</div>
 		);
 	}
