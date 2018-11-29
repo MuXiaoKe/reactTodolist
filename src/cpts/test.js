@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { withRouter } from "react-router";
 class MouseDiv extends Component {
 	render() {
 		const mouse = this.props.mouse;
@@ -36,16 +37,24 @@ class Mouse extends Component {
 	}
 }
 class Test extends Component {
+	handleClick = () => {
+		this.props.history.push("/hello");
+	};
 	render() {
+		const { location } = this.props;
 		return (
 			// <div style={{ height: "200px", width: "100%" }}>
 			// 	<Mouse>{xy => <MouseDiv mouse={xy} />}</Mouse>
 			// </div>
-			<div style={{ height: "200px", width: "100%" }}>
+			<div
+				style={{ height: "200px", width: "100%" }}
+				onClick={this.handleClick}
+			>
 				<Mouse
 					children={mouse => (
 						<p>
 							The mouse position is {mouse.x}, {mouse.y}
+							{location.pathname}
 						</p>
 					)}
 				/>
@@ -54,4 +63,4 @@ class Test extends Component {
 	}
 }
 
-export default Test;
+export default withRouter(Test);

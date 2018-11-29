@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, NavLink } from "react-router-dom";
 import { Layout, Menu } from "antd";
 
 import TodoList from "./cpts/todolist";
@@ -26,16 +26,30 @@ class App extends Component {
 							style={{ lineHeight: "64px" }}
 						>
 							<Menu.Item key="todolist">
-								<Link to="/todolist">todolist</Link>
+								<NavLink
+									to="/todolist"
+									activeClassName="active"
+								>
+									todolist
+								</NavLink>
 							</Menu.Item>
 							<Menu.Item key="hello">
-								<Link to="/hello">hello</Link>
+								<NavLink to="/hello" activeClassName="active">
+									hello
+								</NavLink>
 							</Menu.Item>
 							<Menu.Item key="accountBook">
-								<Link to="/accountBook">accountBook</Link>
+								<NavLink
+									to="/accountBook"
+									activeClassName="active"
+								>
+									accountBook
+								</NavLink>
 							</Menu.Item>
 							<Menu.Item key="test">
-								<Link to="/test">test</Link>
+								<NavLink to="/test" activeClassName="active">
+									test
+								</NavLink>
 							</Menu.Item>
 						</Menu>
 					</Header>
